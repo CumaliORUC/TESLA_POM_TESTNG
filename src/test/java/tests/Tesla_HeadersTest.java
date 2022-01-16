@@ -15,18 +15,17 @@ public class Tesla_HeadersTest {
             SoftAssert softAssert=new SoftAssert();
 
                 teslaPages.ModelS.click();
-                    softAssert.assertTrue(ConfigReader.getProperty("teslaStitle").equals("https://www.tesla.com/models"));
+                    softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaStitle")));
                 teslaPages.Model3.click();
-                    softAssert.assertTrue(ConfigReader.getProperty("tesla3title").equals("https://www.tesla.com/model3"));
+                    softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("tesla3title")));
                 teslaPages.ModelX.click();
-                    softAssert.assertTrue(ConfigReader.getProperty("teslaXtitle").equals("https://www.tesla.com/modelx"));
+                    softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaXtitle")));
                 teslaPages.ModelY.click();
-                    softAssert.assertTrue(ConfigReader.getProperty("teslaYtitle").equals("https://www.tesla.com/modely"));
+                    softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaYtitle")));
                 teslaPages.SolarRoof.click();
-                    softAssert.assertTrue(ConfigReader.getProperty("teslaSolarRoofTitle").equals("https://www.tesla.com/solarroof"));
+                    softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaSolarRoofTitle")));
                 teslaPages.SolarPanels.click();
-                    softAssert.assertTrue(ConfigReader.getProperty("teslaSolarRoofPanels").equals("https://www.tesla.com/solarpanels"));
-
+                    softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaSolarRoofPanels")));
             softAssert.assertAll();
             Driver.closeDriver();
     }
