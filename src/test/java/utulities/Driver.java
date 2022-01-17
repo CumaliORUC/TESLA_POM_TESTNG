@@ -10,7 +10,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     static private WebDriver driver;
-
+        private Driver () {  //to make singleton class
+                    }
         public static WebDriver getDriver() {
             if(driver==null) {
                 switch (ConfigReader.getProperty("browser")) {

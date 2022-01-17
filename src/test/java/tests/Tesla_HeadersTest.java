@@ -16,16 +16,22 @@ public class Tesla_HeadersTest {
 
                 teslaPages.ModelS.click();
                     softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaStitle")));
+
                 teslaPages.Model3.click();
                     softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("tesla3title")));
+
                 teslaPages.ModelX.click();
                     softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaXtitle")));
+
                 teslaPages.ModelY.click();
                     softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaYtitle")));
+
                 teslaPages.SolarRoof.click();
                     softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaSolarRoofTitle")));
+
                 teslaPages.SolarPanels.click();
                     softAssert.assertTrue(Driver.getDriver().getTitle().equals(ConfigReader.getProperty("teslaSolarRoofPanels")));
+
             softAssert.assertAll();
             Driver.closeDriver();
     }
